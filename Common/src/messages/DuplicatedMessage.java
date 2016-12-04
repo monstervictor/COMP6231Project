@@ -1,7 +1,5 @@
 package messages;
 
-import java.net.InetAddress;
-
 public class DuplicatedMessage implements IMessage {
 
 	private static final DuplicatedMessage _message = new DuplicatedMessage();
@@ -17,7 +15,7 @@ public class DuplicatedMessage implements IMessage {
 		return -1;
 	}
 	@Override
-	public InetAddress getSender() {
+	public String getSender() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -2,9 +2,7 @@ package messages;
 
 import java.net.InetAddress;
 
-public interface IMessage {
+public interface IMessage extends ISimpleMessage {
 	byte[] getData();
-	long getSequence();
-	InetAddress getSender();
-	int getSenderPort();
+	
 }

@@ -1,7 +1,5 @@
 package messages;
 
-import java.net.InetAddress;
-
 public class Sequencer_RMMessage implements IMessage {
 
 	private final long _seqSequence;
@@ -32,7 +30,7 @@ public class Sequencer_RMMessage implements IMessage {
 	}
 
 	@Override
-	public InetAddress getSender() {
+	public String getSender() {
 		// TODO Auto-generated method stub
 		return null;
 	}

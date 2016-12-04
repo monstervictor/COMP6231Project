@@ -5,7 +5,6 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-
 import data.*;
 import messages.ErrorMessage;
 import messages.IMessage;
@@ -45,8 +44,9 @@ public class ReliableUDPSender implements IReliableUDPSender {
 		_isOpen = false;
 	}
 
+	//Returns error if timeout
 	@Override
-	public IMessage sendAndReceive(IMessage message) {
+	public synchronized IMessage sendAndReceive(IMessage message) {
 		IMessage responseMsg = ErrorMessage.getInstance();
 		if (_isOpen) {
 
@@ -61,9 +61,9 @@ public class ReliableUDPSender implements IReliableUDPSender {
 				// times
 				DatagramPacket responsePacket = new DatagramPacket(response, response.length);
 				if (sendAndReceive(packet, responsePacket)) {
-					Util.serialize(responsePacket);
+					responseMsg = (IMessage) Util.deserialize(responsePacket.getData());
 				}
-			} catch (IOException e) {
+			} catch (IOException | ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 		}

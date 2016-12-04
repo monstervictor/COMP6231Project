@@ -5,6 +5,7 @@ import java.util.*;
 
 import communication.IReliableUDPReceiver;
 import messages.DuplicatedMessage;
+import messages.ErrorMessage;
 import messages.FE_SequencerMessage;
 import messages.IMessage;
 import messages.Sequencer_RMMessage;
@@ -15,6 +16,7 @@ public class UDPReceiverImp implements IReliableUDPReceiver {
 	private IReliableUDPReceiver _receiver;
 	private Counter _counter;
 
+	//String: frontEnd ip; first long: fe_id, second long: seq_id
 	List<Tuple<String, Map<Long, Long>>> _messageHistory;
 
 	public UDPReceiverImp(IReliableUDPReceiver receiver) {
@@ -23,11 +25,15 @@ public class UDPReceiverImp implements IReliableUDPReceiver {
 		_messageHistory = new ArrayList<Tuple<String, Map<Long, Long>>>();
 	}
 
+	
+	//Returns ErrorMessage or DuplicatedMessage or Sequencer_RMMessage
 	@Override
 	public IMessage receive() {
 		IMessage ret = _receiver.receive();
+		if(ret instanceof ErrorMessage) return ret;
+		
 		FE_SequencerMessage leMessage = (FE_SequencerMessage) ret;
-		final String netAddress = ret.getSender().getHostAddress();
+		final String netAddress = ret.getSender();
 		// see if this is the first message from address
 		Tuple<String, Map<Long, Long>> lookForSender = _messageHistory.stream().filter(c -> c.x.equals(netAddress))
 				.findFirst().orElse(null);
@@ -40,15 +46,15 @@ public class UDPReceiverImp implements IReliableUDPReceiver {
 			} else {
 				// addKey and wrap message
 				long seq = addKey(lookForSender, ret.getSequence());
-				ret = new Sequencer_RMMessage(leMessage, seq, ret.getSender().getHostAddress(), ret.getSenderPort());
+				ret = new Sequencer_RMMessage(leMessage, seq, ret.getSender(), ret.getSenderPort());
 			}
 		} else {
 			// Add server, key and wrap message
-			Tuple<String, Map<Long, Long>> toAdd = new Tuple<String, Map<Long, Long>>(ret.getSender().getHostAddress(),
-					new LinkedHashMap<Long, Long>());
+			Tuple<String, Map<Long, Long>> toAdd = new Tuple<String, Map<Long, Long>>(ret.getSender(),
+					new HashMap<Long, Long>());
 			_messageHistory.add(toAdd);
 			long seq = addKey(toAdd, ret.getSequence());
-			ret = new Sequencer_RMMessage(leMessage, seq, ret.getSender().getHostAddress(), ret.getSenderPort());
+			ret = new Sequencer_RMMessage(leMessage, seq, ret.getSender(), ret.getSenderPort());
 		}
 		return ret;
 	}

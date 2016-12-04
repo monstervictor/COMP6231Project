@@ -1,7 +1,5 @@
 package messages;
 
-import java.net.InetAddress;
-
 public class ErrorMessage implements IMessage{
 	private static final IMessage _errorMessage = new ErrorMessage();
 	public static IMessage getInstance(){ return _errorMessage;}
@@ -17,7 +15,7 @@ public class ErrorMessage implements IMessage{
 	}
 
 	@Override
-	public InetAddress getSender() {
+	public String getSender() {
 		// TODO Auto-generated method stub
 		return null;
 	}
