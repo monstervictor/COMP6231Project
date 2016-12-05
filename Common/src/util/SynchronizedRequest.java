@@ -1,11 +1,10 @@
-package Shared;
+package util;
 
 import java.io.Serializable;
 
-import Interfaces.IOperationMessage;
 
 @SuppressWarnings("serial")
-public class SynchronizedRequest implements Serializable, IOperationMessage 
+public class SynchronizedRequest implements Serializable//, IOperationMessage 
 {
 	private String city;
 	private String ipAddress;
@@ -23,6 +22,7 @@ public class SynchronizedRequest implements Serializable, IOperationMessage
 		this.isSynced = false;
 	}
 
+	/*
 	public OperationType getOperationType(){return OperationType.RequestSync;}
 	public String getIpAddress() {return ipAddress;}
 	public void setIpAddress(String ipAddress) {this.ipAddress = ipAddress;}
@@ -34,5 +34,5 @@ public class SynchronizedRequest implements Serializable, IOperationMessage
 	public int getPort() {return port;}
 	public void setPort(int port) {this.port = port;}
 	public boolean isSyncDone() {return isSynced;}
-	public void setSyncDone(boolean syncDone) {this.isSynced = syncDone;}
+	public void setSyncDone(boolean syncDone) {this.isSynced = syncDone;}*/
 }

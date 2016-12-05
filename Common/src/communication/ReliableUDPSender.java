@@ -6,6 +6,7 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 
 import data.*;
+import data.ServerInfo;
 import messages.ErrorMessage;
 import messages.IMessage;
 import util.*;

@@ -1,4 +1,4 @@
-package Shared;
+package util;
 
 public class Const
 {
