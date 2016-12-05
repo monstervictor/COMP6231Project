@@ -1,0 +1,8 @@
+[Sat Dec 03 16:00:38 EST 2016 NDL] [SERVER] Server Created
+
+[Sat Dec 03 16:00:38 EST 2016 NDL] Attempting to publish UDP for NDL
+
+[Sat Dec 03 16:00:38 EST 2016 NDL] Attempting to start CORBA services for server NDL
+
+[Sat Dec 03 16:00:38 EST 2016 NDL] UDP port for server : NDL is 5977
+

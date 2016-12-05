@@ -1,0 +1,16 @@
+module FlightCorba{
+	
+	interface Airport
+	{
+		 string bookFlight(in string firstName, in string lastName, in string address, in string phone, in string destination,  in string flightClass, in string date);
+		 string createFlightRecord (in string origin, in string destination, in string date, in string time, in short economySeats, in short businessSeats, in short firstSeats);
+		 string editFlightRecord (in string recordID, in string fieldName, in string newValue);
+		 string getBookedFlightCount (in string recordType);
+		 string transferReservation (in string PassengerID, in string CurrentCity, in string OtherCity);
+		 string deleteFlightRecord (in string recordID);
+		 string editPassengerRecord (in string recordID, in string lastName, in string fieldName, in string newValue);
+		 void logDumpPassengers();
+		 void logDumpFlights();
+	};
+
+};

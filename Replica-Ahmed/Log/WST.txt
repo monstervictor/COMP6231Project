@@ -1,0 +1,8 @@
+[Sat Dec 03 16:00:38 EST 2016 WST] [SERVER] Server Created
+
+[Sat Dec 03 16:00:38 EST 2016 WST] Attempting to publish UDP for WST
+
+[Sat Dec 03 16:00:38 EST 2016 WST] Attempting to start CORBA services for server WST
+
+[Sat Dec 03 16:00:38 EST 2016 WST] UDP port for server : WST is 7719
+

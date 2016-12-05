@@ -1,0 +1,8 @@
+[Sat Dec 03 16:00:38 EST 2016 MTL] [SERVER] Server Created
+
+[Sat Dec 03 16:00:38 EST 2016 MTL] Attempting to publish UDP for MTL
+
+[Sat Dec 03 16:00:38 EST 2016 MTL] Attempting to start CORBA services for server MTL
+
+[Sat Dec 03 16:00:38 EST 2016 MTL] UDP port for server : MTL is 7445
+
