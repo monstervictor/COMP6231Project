@@ -1,0 +1,11 @@
+module CorbaServers {
+	interface IFlightServer{
+	string getBookFlightCount(in long recordType);
+	void editFlightRecord(in long recordID, in string fieldName, in string newValue);
+	long bookFlight(in string firstName, in string lastName, in string address, in string phone, in string destination, in string date, in long seatClass);
+	boolean transferReservation(in long passangerID, in long currentCity, in long otherCity);
+	};
+	interface ICounterServer{
+	long getNext();
+	};
+};

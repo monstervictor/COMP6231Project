@@ -1,0 +1,28 @@
+Mon Nov 28 14:51:09 EST 2016: UDPSeatServer: Starting
+Mon Nov 28 14:51:09 EST 2016: UDPSeatServer: Listening to port 6007
+Mon Nov 28 14:51:09 EST 2016: Initialized UDPServer Seats
+Mon Nov 28 14:51:09 EST 2016: UDPTransferTicketServer: Initializing
+Mon Nov 28 14:51:09 EST 2016: UDPTransferTicketServer: Listening to port 6009
+Mon Nov 28 14:51:09 EST 2016: Initialized UDPTransferServer
+Mon Nov 28 14:52:18 EST 2016: Starting thread to send request to Montreal
+Mon Nov 28 14:52:18 EST 2016: Shaped packet to send request to Montreal 6008
+Mon Nov 28 14:52:18 EST 2016: Timeout set to 2956 to send to Montreal 6008
+Mon Nov 28 14:52:18 EST 2016: Sending request packet toMontreal 6008
+Mon Nov 28 14:52:33 EST 2016: current try failed: 0
+Mon Nov 28 14:52:33 EST 2016: Sending request packet toMontreal 6008
+Mon Nov 28 14:52:33 EST 2016: Received answer from Montreal 6008
+Mon Nov 28 14:52:33 EST 2016: Finishing thread to send transfer request to Montreal 6008
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer:  received request
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer parsed the data and is requesting read access of the data
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Access granted to read data
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Reading count of first class seats
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Notified finished read access and shaping a reply
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: reply sent: NDL 0
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Listening to port 6007
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer:  received request
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer parsed the data and is requesting read access of the data
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Access granted to read data
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Reading count of first class seats
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Notified finished read access and shaping a reply
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: reply sent: NDL 0
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Listening to port 6007

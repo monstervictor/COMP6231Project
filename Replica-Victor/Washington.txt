@@ -1,0 +1,20 @@
+Mon Nov 28 14:51:09 EST 2016: UDPSeatServer: Starting
+Mon Nov 28 14:51:09 EST 2016: UDPSeatServer: Listening to port 6006
+Mon Nov 28 14:51:09 EST 2016: Initialized UDPServer Seats
+Mon Nov 28 14:51:09 EST 2016: UDPTransferTicketServer: Initializing
+Mon Nov 28 14:51:09 EST 2016: UDPTransferTicketServer: Listening to port 6010
+Mon Nov 28 14:51:09 EST 2016: Initialized UDPTransferServer
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer:  received request
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer parsed the data and is requesting read access of the data
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Access granted to read data
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Reading count of first class seats
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Notified finished read access and shaping a reply
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: reply sent: WGN 0
+Mon Nov 28 14:53:18 EST 2016: UDPSeatServer: Listening to port 6006
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer:  received request
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer parsed the data and is requesting read access of the data
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Access granted to read data
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Reading count of first class seats
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Notified finished read access and shaping a reply
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: reply sent: WGN 0
+Mon Nov 28 14:53:42 EST 2016: UDPSeatServer: Listening to port 6006

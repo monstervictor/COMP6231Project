@@ -81,12 +81,13 @@ public class SequencerSender {
 					Stream<SequencerSendingThread> errors = runnables.stream()
 							.filter(c -> c.getAnswer() instanceof ErrorMessage);
 
-					//update value of _seqToReplica (errors because those are the ones missing the msg)
+					//update value of _seqToReplica ("errors" because those are the ones missing the msg)
 					_seqToReplicaMonitor.requestWriteAccess();
 					int numberOfReplicasSent = _seqToReplicaAnswerCount.get(forRM.getSequence());
 					_seqToReplicaAnswerCount.put(forRM.getSequence(), (int) errors.count());
 					_seqToReplicaMonitor.finishedWriteAccess();
 
+					//create troublshooterThreads and start
 					errors.forEach(c -> {
 						ErrorTroubleshooterThread runnable = new ErrorTroubleshooterThread(this, c.getUDPSender(),
 								c.getAnswer());
