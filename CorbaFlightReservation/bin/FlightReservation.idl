@@ -1,0 +1,54 @@
+module flightreservation {
+    interface FlightReservationSystem {
+        string editFlightRecord(in string adminUser, in string flightInfo, in short operationType);
+        string getBookedFlightCount(in short type);
+        string transferReservation(in short passengerId, in string currentCity, in string destinationCity);
+        string bookFlight(in string firstName, in string lastName, in string address, in string phone, in string destination, in long date, in short type);
+    };
+    
+/*    
+    struct FlightInfo {
+        string departureCity;
+        string destinationCity;
+        string flightNumber;
+        
+	    short economicClassTotalSeats;
+	    short businessClassTotalSeats;
+	    short firstClassTotalSeats;
+	    
+	    short economicClassSeatsSold;
+	    short businessClassSeatsSold;
+	    short firstClassSeatsSold;
+	    
+	    long departureDate;
+    };
+    
+    struct Status {
+        short errorCode;
+        string message;
+    };
+    
+    struct RecordSummary {
+        string city;
+        short totalrecords;
+    };
+    
+    struct AdminUser {
+        string city;
+        string code;
+    };
+    
+    typedef sequence<RecordSummary> RecordSummarySeq;
+    
+    interface ManagerRole {
+        Status editFlightRecord(in AdminUser admin, in FlightInfo flight, in short type);
+        RecordSummarySeq getBookedFlightCount(in short type);
+        Status transferReservation(in short passengerId, in string currentCity, in string otherCity);
+    };
+    
+    interface RegularRole {
+        Status bookFlight(in string firstName, in string lastName, in string address, in string phone, in string destination, in long date, in short type);
+    };
+*/
+    
+};
