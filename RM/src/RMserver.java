@@ -25,12 +25,6 @@ public class RMserver
         }
     }
     
-    public void startFrontEndMessageUdpServer() 
-    {
-        UdpRMtoFEListener udpServerFrontEnd = new UdpRMtoFEListener(RMservice);
-        udpServerFrontEnd.start();
-    }
-    
 
     public void initializeCityServers() 
     {

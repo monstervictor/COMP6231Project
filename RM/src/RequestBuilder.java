@@ -5,20 +5,21 @@ public class RequestBuilder
 
 	private String mainArg;
     private String ReplicaPath;
-    private String SharedPath = "../../out/production/Shared";
+    private String SharedPath = "/Shared";
     private String classPath;
     private String codeName;
-    private String SeqPath = "../../out/production/Sequencer";
+    private String SeqPath = "/Sequencer";
     private String udpLoc = "";
     private String separator;
+	private String com;
     
-private String cmdCommand;
+
 	public RequestBuilder setCode(String student)
 	{
         this.separator = ";";
-        this.cmdCommand = "cmd /c start";
+        this.com = "";
         this.codeName = student;
-        this.ReplicaPath =  String.format("../../out/production/Replica_%1$s", codeName);
+        this.ReplicaPath =  String.format("/Replica_%1$s", codeName);
 
         switch (student.toLowerCase())
         {
@@ -52,7 +53,7 @@ private String cmdCommand;
                 SeqPath,
                 classPath,
                 mainArg,
-                cmdCommand,
+                com,
                 udpLoc
         );
 	}

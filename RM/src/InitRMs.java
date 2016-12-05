@@ -15,7 +15,7 @@ public class InitRMs
         try 
         {
             server.startCitiesServers(implName);
-            server.startFrontEndMessageUdpServer();
+            //server.startRMtoFE();
             server.initializeCityServers();
         } 
         catch (IOException e) {e.printStackTrace();}

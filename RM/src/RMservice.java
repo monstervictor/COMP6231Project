@@ -67,11 +67,6 @@ public class RMservice implements IRMservice
     try 
     {
         File f = new File(System.getProperty("user.dir") + "/../Replica_" + city + "_" + implementationName);
-        System.err.println(
-                "Spawning process with command: " + command
-                        + "\n"
-                        + "and working directory: " + f.getAbsoluteFile());
-
         p = Runtime.getRuntime().exec(command, null, f);
     } 
     catch (IOException e) 
@@ -110,20 +105,6 @@ public class RMservice implements IRMservice
     	});
 	}
 
-	
-	@Override
-	public void onError(String city, String serverAddress)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onFailure(String city, String serverAddress)
-	{
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void reset(String machineToGetStateFrom, String implementationName, String city)
