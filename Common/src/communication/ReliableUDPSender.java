@@ -48,6 +48,7 @@ public class ReliableUDPSender implements IReliableUDPSender {
 	//Returns error if timeout
 	@Override
 	public synchronized IMessage sendAndReceive(IMessage message) {
+		if(!isOpen()) open();
 		IMessage responseMsg = ErrorMessage.getInstance();
 		if (_isOpen) {
 
